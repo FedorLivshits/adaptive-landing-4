@@ -95,5 +95,8 @@ ul{
 
 .about__text p{
     margin-bottom: 25px;
+}
 
+.video{
+    background-image: url("../images/video-bg.png");
 }
