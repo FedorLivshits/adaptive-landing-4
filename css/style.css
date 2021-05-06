@@ -203,3 +203,8 @@ ul {
     opacity: 0;
     z-index: 2;
 }
+
+.copy{
+    padding: 14px 0 15px;
+    text-align: center;
+}
