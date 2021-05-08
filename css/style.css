@@ -57,7 +57,6 @@ ul {
     width: 100%;
     background: linear-gradient(180deg, #0E0E0E 0%, rgba(17, 17, 17, 0.850295) 16.53%, rgba(32, 31, 33, 0) 100%);
     transform: rotate(180deg);
-
 }
 
 .menu__list {
@@ -67,8 +66,13 @@ ul {
     background: linear-gradient(180deg, #111213 0%, #111213 43.62%, rgba(32, 31, 33, 0) 86.33%);
 }
 
+.menu__btn {
+    display: none;
+}
+
 .menu__list-item {
     padding: 0 13px;
+
 }
 
 .menu__list-link {
@@ -82,7 +86,7 @@ ul {
 }
 
 .logo {
-    padding-top: 178px;
+    padding-top: 17vh;
 }
 
 .about__inner {
@@ -122,7 +126,7 @@ ul {
     font-size: 72px;
     line-height: 84px;
     color: #85CCDC;
-    padding-top: 444px;
+    padding-top: 45vh;
 }
 
 .video__text span {
@@ -148,7 +152,7 @@ ul {
 
 .seasons__inner {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 100px 75px;
     counter-reset: num;
 }
@@ -204,7 +208,115 @@ ul {
     z-index: 2;
 }
 
-.copy{
+.copy {
     padding: 14px 0 15px;
     text-align: center;
+}
+
+@media (max-width: 1295px) {
+    .logo__img {
+        width: 50%;
+    }
+
+    .menu__list-link {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .about__info {
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 1088px) {
+    .seasons__item {
+        height: 340px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about__inner {
+        display: block;
+    }
+
+    .section-page {
+        padding: 50px 0;
+    }
+
+    .title {
+        margin-bottom: 50px;
+    }
+
+    body {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .video__text span {
+        padding-right: 200px;
+    }
+
+    .video__text {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    .video__btn {
+        margin-right: 0;
+        padding-left: 62px;
+    }
+
+    .video__btn::before {
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+        top: -16px;
+    }
+
+    .seasons__inner {
+        grid-gap: 80px 35px;
+    }
+}
+
+@media (max-width: 640px) {
+    .menu__list {
+        display: block;
+    }
+
+    .menu__list-item {
+        padding: 10px 13px;
+    }
+
+    .menu__btn {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        display: block;
+        height: 50px;
+        width: 50px;
+        background-color: white;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    .menu__list {
+        background: linear-gradient(
+                180deg, #111213 0%, #111213 9.62%, rgba(32, 31, 33, 0) 86.33%);
+        transform: translateY(-357px);
+        transition: all .3s;
+    }
+
+    .menu__list.menu__list--active {
+        transform: translateY(0px);
+    }
+
+    .logo {
+        padding-top: 21vh;
+    }
+}
+
+@media (max-width: 414px) {
+    .seasons__item {
+        height: 203px;
+    }
 }
